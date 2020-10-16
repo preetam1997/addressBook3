@@ -78,8 +78,10 @@ public class DriverClass {
 			System.out.println("13.UC12 Sort based on State, City or Zip");
 			System.out.println("14.UC13 Write contacts to file");
 			System.out.println("15.UC13 Read contacts from file");
-			System.out.println("16.UC13 Read contacts from file");
-			System.out.println("17.UC13 Read contacts from file");
+			System.out.println("16.UC14 Write contacts to csv file");
+			System.out.println("17.UC14 Read contacts from csv file");
+			System.out.println("18.UC15 Write contacts to json file");
+			System.out.println("19.UC15 Read contacts from json file");
 			System.out.println("20.Exit");
 			System.out.println("Enter your choice:");
 			int choice = myObj.nextInt();
@@ -235,6 +237,12 @@ public class DriverClass {
 				new AddressBookCSVIOService().readContactData(AddressBookMap);
 				break;
 			case 18:
+				new AddressBookJSONIOService().writeData(AddressBookMap);
+				break;
+			case 19:
+				new AddressBookJSONIOService().readData(AddressBookMap);
+				break;
+			case 20:
 				return;
 			}
 
